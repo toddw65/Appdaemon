@@ -1,0 +1,19 @@
+log:
+  accessfile: /conf/access.log
+  errorfile: /conf/error.log
+  logfile: /conf/appdaemon.log
+  log_generations: 3
+  log_size: 1000000
+appdaemon:
+  threads: 10
+  api_port: 5002
+  #api_key: !secret http_password
+  plugins:
+    HASS:
+      type: hass
+      ha_url: "http://192.168.0.100:8123"
+      ha_key: !secret http_password
+      namespace: default
+hadashboard:
+  dash_url: http://hass:5050
+  dash_dir: /conf/dashboards      

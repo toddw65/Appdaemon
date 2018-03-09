@@ -1,0 +1,30 @@
+set channel:
+  module: set_channel
+  class: SetChannel
+  host_ip: 192.168.0.100
+  db_user: !secret db_user
+  db_pass: !secret db_pass
+  db_name: !secret hass_db
+  
+my ferrellgas:
+  module: myferrellgas
+  class: MyFerrellGas
+  login_name: !secret login_ferrellgas
+  login_pass: !secret pass_ferrellgas
+  site_url: https://myferrellgas.com
+  img_save_path: /config/www/tank.png
+  
+test trigger table:
+  module: test_trigger_table
+  class: TestTriggerTable
+  site_url: http://uplink.jameslong.name/channels.html
+  img_save_path: /home/todd/config/home-assistant/www/tank.png
+  
+scrape dish channels:
+  module: scrape_dish_channels
+  class: ScrapeDishChannels
+  scrape_url: http://uplink.jameslong.name/channels.html
+  host_ip: 192.168.0.100
+  db_user: !secret db_user
+  db_pass: !secret db_pass
+  db_name: !secret hass_db

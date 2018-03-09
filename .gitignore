@@ -1,0 +1,9 @@
+*
+!*.yaml
+!*.py
+!.gitignore
+!apps
+!custom_css
+!dashboards
+*.log
+secrets.yaml

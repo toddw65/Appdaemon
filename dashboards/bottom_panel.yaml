@@ -1,0 +1,72 @@
+load_main_panel:
+    widget_type: navigate
+    title: Home
+    icon_inactive: fa-home
+    url: /Home
+
+load_entry_panel:
+    widget_type: navigate
+    title: Entry
+    icon_inactive: mdi-tie
+    url: /Entry
+    
+load_greatroom_panel:
+    widget_type: navigate
+    title: Great Room
+    icon_inactive: mdi-tie
+    url: /GreatRoom
+
+load_kitchen_panel:
+    widget_type: navigate
+    title: Kitchen
+    icon_inactive: mdi-tie
+    url: /Kitchen
+    
+load_office_panel:
+    widget_type: navigate
+    title: Office
+    icon_inactive: mdi-tie
+    url: /Office
+
+load_master_suite_panel:
+    widget_type: navigate
+    title: Master Suite
+    icon_inactive: fa-bed
+    url: /MasterSuite
+
+load_laundry_panel:
+    widget_type: navigate
+    title: Laundry
+    icon_inactive: mdi-tshirt-crew
+    url: /Laundry
+
+load_outside_front_panel:
+    widget_type: navigate
+    title: Outside Front
+    icon_inactive: mdi-pine-tree
+    url: /OutsideFront
+
+load_outside_rear_panel:
+    widget_type: navigate
+    title: Outside Rear
+    icon_inactive: mdi-pool
+    url: /OutsideRear
+    
+load_security_panel:
+    widget_type: navigate
+    title: Security
+    icon_inactive: fa-lock
+    url: /Security
+
+load_guestroom_panel:
+    widget_type: navigate
+    title: Guest Bedroom
+    icon_inactive: mdi-bed
+    url: /GuestBedroom
+
+reload:
+    widget_type: reload
+    title: Reload
+    
+layout: 
+    - load_main_panel, load_entry_panel, load_greatroom_panel, load_kitchen_panel, load_master_suite_panel, load_guestroom_panel, load_outside_front_panel, load_outside_rear_panel, load_security_panel, reload
