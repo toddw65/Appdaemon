@@ -19,7 +19,7 @@ from pyvirtualdisplay import Display
 class MyFerrellGas(hass.Hass):
     def initialize(self):
         self.log("MyFerrellGas loaded")
-        runtime = datetime.time(2, 15, 0)
+        runtime = datetime.time(2, 30, 0)
         self.run_daily(self.do_scrape, runtime)
 
     def do_scrape(self, event_name):

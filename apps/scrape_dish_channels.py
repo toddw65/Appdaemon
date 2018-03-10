@@ -12,7 +12,7 @@ import pymysql
 class ScrapeDishChannels(hass.Hass):
     def initialize(self):
         self.log("ScrapeDishChannels loaded.")
-        runtime = datetime.time(2, 15, 0)
+        runtime = datetime.time(7, 35, 0)
         self.run_daily(self.scrape_channels, runtime)
 
     def scrape_channels(self, event_name):  

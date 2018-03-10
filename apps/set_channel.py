@@ -24,7 +24,7 @@ class SetChannel(hass.Hass):
         db_name = self.args["db_name"]
         
         words = str(data["channel_name"]).lower().split()
-        room = words[words.index("tv")-1]
+        room = ' '.join(words[:words.index("tv")]).replace('the ','')
         channel_name = ' '.join(words[words.index("tv")+2:])
         
         self.log(words)

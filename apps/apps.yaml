@@ -1,10 +1,10 @@
 set channel:
   module: set_channel
   class: SetChannel
-  host_ip: 192.168.0.100
+  host_ip: '192.168.0.100'
   db_user: !secret db_user
   db_pass: !secret db_pass
-  db_name: !secret hass_db
+  db_name: hass_db
   
 my ferrellgas:
   module: myferrellgas
@@ -24,7 +24,31 @@ scrape dish channels:
   module: scrape_dish_channels
   class: ScrapeDishChannels
   scrape_url: http://uplink.jameslong.name/channels.html
-  host_ip: 192.168.0.100
+  host_ip: '192.168.0.100'
   db_user: !secret db_user
   db_pass: !secret db_pass
-  db_name: !secret hass_db
+  db_name: hass_db
+  
+Occupancy Simulator:
+  module: occusim
+  class: OccuSim
+  dump_times: '1'
+  enable: input_boolean.occusim
+  log: '1'
+  random_house_end: Night
+  random_house_maxduration: '01:00:00'
+  random_house_minduration: '00:15:00'
+  random_house_name: Random House
+  random_house_number: '5'
+  random_house_off_kitchen: light.kitchenlights_level
+  random_house_off_hallway: light.hallwaylights_level
+  random_house_off_master_bedroom: light.masterbedroom_mainlights_level
+  random_house_on_kitchen: light.kitchenlights_level
+  random_house_on_hallway: light.hallwaylights_level
+  random_house_on_master_bedroom: light.masterbedroom_mainlights_level
+  random_house_start: Evening
+  step_evening_name: Evening
+  step_evening_start: sunset - 00:45:00
+  step_night_name: Night
+  step_night_start: '23:59:59'
+  
